@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background: url('./body-bg.jpg');
+    --button-background: #82395B;
+    --button-background-hover: #bca5ae;
+    --button-border: 5px outset #000000;
+    --button-box-shadow: 2px 2px 2px 2px #000000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    color: #FFFFFF;
+    font-size: 2.2rem;
+}
+
+html {
+    background: var(--background) no-repeat center fixed;
+    background-size: cover;
+    opacity: 0.95;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Roboto Condensed', 'Courier New', monospace;
+    font-size: 62.5%;
+    place-content: center;
+    place-items: center;
+    text-shadow: 1px 1px 1px #FFFFFF90;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background: var(--button-background);
+    border: var(--button-border);
+    box-shadow: var(--button-box-shadow);;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 10vh;
+    width: 25vh;
+}
+
+button:active {
+    scale: 0.95;
+}
+
+button:hover {
+    background-color: var(--button-background-hover);
+    color: #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 2%;
+}
+
+#content {
+    background-color: #4E042D70;
+    border: 6px outset #000000;
+    border-radius: 10%;
+    height: 80vh;
+    margin: 2% auto;
+    width: 90%;
+}
