@@ -1,48 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --background: url('./body-bg.jpg');
-    --button-background: #82395B;
-    --button-background-hover: #bca5ae;
-    --button-border: 5px outset #000000;
+    --background: url('./body_bg2.jpg');
+    --box-shadow: 5px 5px 5px 5px #000000;
+    --button-background: #00044098;
+    --button-border: 3px outset #000000;
     --button-box-shadow: 2px 2px 2px 2px #000000;
+    --button-hover-background: #00044270;
+    --button-hover-font-color: #FFFFF0;
+    --button-hover-text-shadow: 1px 1px 1px #FFFFFF70;
+    --content-background-color: #00044098;
+    --content-border: 2px outset #000009;
+    --font-color: #FFFFFF;
+    --menu-background-color: #00022070;
+    --text-shadow: 5px 5px 5px #000000;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: inherit;
-    color: #FFFFFF;
+    color: var(--font-color);
     font-size: 2.2rem;
+    text-shadow: var(--text-shadow);
 }
 
 html {
-    background: var(--background) no-repeat center fixed;
+    background: var(--background) no-repeat;
     background-size: cover;
-    opacity: 0.95;
     box-sizing: border-box;
-    display: flex;
-    font-family: 'Roboto Condensed', 'Courier New', monospace;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
     font-size: 62.5%;
-    place-content: center;
-    place-items: center;
-    text-shadow: 1px 1px 1px #FFFFFF90;
+    font-style: bold;
+    font-weight: 800;
+    height: 100vh;
+    opacity: 0.95;
+    width: 100vw;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
 
 body {
+    display: flex;
+    flex-flow: row wrap;
     height: 100%;
+    place-content: center;
+    place-items: center;
     width: 100%;
 }
 
 button {
     background: var(--button-background);
     border: var(--button-border);
-    box-shadow: var(--button-box-shadow);;
     border-radius: 10px;
+    box-shadow: var(--button-box-shadow);;
     cursor: pointer;
+    font-weight: bolder;
     height: 10vh;
     width: 25vh;
 }
@@ -52,22 +67,131 @@ button:active {
 }
 
 button:hover {
-    background-color: var(--button-background-hover);
-    color: #000000;
+    background-color: var(--button-hover-background);
+    color: var(--button-hover-font-color);
+    text-shadow: var(--button-hover-text-shadow);
 }
 
 nav {
     display: flex;
-    justify-content: center;
     gap: 2%;
+    justify-content: center;
     margin-top: 2%;
 }
 
-#content {
-    background-color: #4E042D70;
-    border: 6px outset #000000;
+p {
+    margin: 1% auto;
+}
+
+.content {
+    background-color: var(--content-background-color);
+    border: var(--content-border);
     border-radius: 10%;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-flow: row wrap;
     height: 80vh;
-    margin: 2% auto;
+    margin: 1% auto;
+    place-content: center;
+    place-items: center;
     width: 90%;
+}
+
+#home-div {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1% auto;
+    text-align: center;
+}
+
+#home-header {
+    font-size: 7.5rem;
+    margin: 1% auto 1%;
+    width: 100%;
+}
+
+#header-quote {
+    font-size: 2.7rem;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 auto 2%;
+    width: 100%;
+}
+
+#nonna-img {
+    border: 5px outset black;
+    border-radius: 10%;
+    box-shadow: var(--box-shadow);
+    filter: grayscale(65%);
+    height: 420px;
+    margin-left: 7%;
+    object-fit: cover;
+    width: 350px;
+}
+
+.content-info {
+    font-size: 3rem;
+    height: 50vh;
+    justify-content: center;
+    line-height: 7rem;
+    margin: 0 auto;
+    padding: 1%;
+    text-align: right;
+    width: 55%;
+}
+
+.menu-content {
+    background-color: var(--menu-background-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-flow: row wrap;
+    height: 95%;
+    justify-content: space-evenly;
+    line-height: 0;
+    overflow: auto;
+    width: 80%;
+}
+
+.menu-options {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 2rem;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.option {
+    height: 5vh;
+    width: 15%;
+}
+
+.food-sub-menu {
+    display: flex;
+    flex-flow: row wrap;
+    height: 80%;
+    justify-content: space-evenly;
+    margin: 1% auto;
+    overflow: auto;
+    width: 100%;
+}
+
+.food-card {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 40vh;
+    line-height: 2.5rem;
+    margin: 1% auto 2%;
+    padding: 1%;
+    text-align: center;
+    width: 25%;
+}
+
+.food-image {
+    border-radius: 10%;
+    box-shadow: var(--box-shadow);
+    height: 250px;
+    margin: 5%;
+    width: 250px;
 }
