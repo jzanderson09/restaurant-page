@@ -1,7 +1,8 @@
-import generateAppetizers from './appetizers';
-import generateEntrees from './entrees';
+import generateAppetizers from './appetizers.js';
+import generateDesserts from './desserts.js';
+import generateDrinks from './drinks.js';
+import generateEntrees from './entrees.js';
 
-// .food-sub-menu > 
 //Returns submenu options and submenu (appetizers, entrees, etc):
 function generateSubMenu() {
     let menuContent = document.createElement('div');
@@ -12,9 +13,16 @@ function generateSubMenu() {
 
 export function changeSubMenu(subMenuId) {
     let subMenu = document.querySelector('.food-sub-menu');
+    subMenu.innerHTML = '';
     switch(subMenuId) {
         case 'entrees':
             subMenu.replaceWith(generateEntrees());
+            break;
+        case 'desserts':
+            subMenu.replaceWith(generateDesserts());
+            break;
+        case 'drinks':
+            subMenu.replaceWith(generateDrinks());
             break;
         default:
             subMenu.replaceWith(generateAppetizers());

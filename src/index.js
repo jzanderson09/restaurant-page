@@ -1,13 +1,14 @@
 import './styles.css';
-import generateHome from './home.js';
-import generateSubMenu from './menu.js';
-import generateOptions from './options.js';
+import generateHome from './home';
+import generateSubMenu from './menu';
+import generateOptions from './options';
 
 function switchPage(pageType) {
+    let content = document.querySelector('.content');
     content.innerHTML = '';    
     switch(pageType) {
         case 'menu':
-            content.replaceChildren(generateOptions(), generateSubMenu());
+            content.append(generateOptions(), generateSubMenu());
             break;
         case 'about':
             alert(pageType);
@@ -16,11 +17,9 @@ function switchPage(pageType) {
             alert(pageType);
             break;
         default:
-            content.replaceChildren(generateHome());
+            content.append(generateHome());
     }
 }
-
-let content = document.querySelector('.content');
                 
 const navLinks = document.querySelectorAll('.nav-links');
 navLinks.forEach(btn => {

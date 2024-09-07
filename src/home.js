@@ -10,7 +10,7 @@ function generateHome() {
 
     let headerQuote = document.createElement('p');
     headerQuote.id = 'header-quote';
-    headerQuote.textContent = 'dai nostri cuori al vostro piatto';
+    headerQuote.textContent = 'Dai nostri cuori al vostro piatto';
     
     let nonnaImg = document.createElement('img');
     nonnaImg.id = 'nonna-img';
