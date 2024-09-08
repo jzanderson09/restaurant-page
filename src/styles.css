@@ -194,3 +194,36 @@ p {
     margin: 5%;
     width: 250px;
 }
+
+.contact-form {
+    background-color: #000000;
+    border: 15px inset #000000;
+    border-radius: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 50%;
+    margin: 0 auto;
+    place-items: center;
+    width: 50%;
+}
+
+input, textarea {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-shadow: 5px 5px 5px #FFFFFF;
+    width: 100%;
+}
+
+input:valid, textarea:valid {
+    border: 1px solid green;    
+}
+
+textarea {
+    height: 100%;
+}
+
+#submit-button {
+    height: 5vh;
+    margin: 2% auto;
+    width: 25%;
+}
